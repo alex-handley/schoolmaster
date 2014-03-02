@@ -1,6 +1,6 @@
-# SeriousSchoolmaster
+# ** Not Ready FOR USE **
 
-TODO: Write a gem description
+# SeriousSchoolmaster
 
 ## Installation
 
