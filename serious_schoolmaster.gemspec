@@ -23,6 +23,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "git", "~> 1.2.6"
   spec.add_dependency "cane", "~> 2.6.0"
-  spec.add_dependency "brakeman", "~> 2.3.0"
-  spec.add_dependency "rails_best_practices", "~> 1.14.0"
+  spec.add_dependency "brakeman", "~> 2.4.0"
+  spec.add_dependency "rails_best_practices", "~> 1.15.0"
 end
