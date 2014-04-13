@@ -11,7 +11,11 @@ task :pushme => :environment do
 
   system("rails_best_practices .")
   system("bundle exec rspec spec")
-  system("brakeman")
+
+	unless SeriousSchoolmaster.configuration.debug
+		brakeman_opts = "-q"
+	end
+  system("brakeman #{brakeman_opts}")
 
   # Push Branch
   g = Git.open(Rails.root, log: Logger.new(STDOUT))
