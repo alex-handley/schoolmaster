@@ -3,6 +3,10 @@ require "git"
 desc 'A great audit tool that checks your shit before its pushed'
 task :pushme => :environment do
   cane_opts = "--style-measure 90"
+	unless SeriousSchoolmaster.configuration.require_file_comments
+		cane_opts += " --no-doc"
+	end
+
   system("cane . #{cane_opts}")
 
   system("rails_best_practices .")
