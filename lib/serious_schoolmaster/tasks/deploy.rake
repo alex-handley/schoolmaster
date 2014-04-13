@@ -14,6 +14,6 @@ task :pushme => :environment do
   system("brakeman")
 
   # Push Branch
-  g = Git.open(Rails.root, :log => Logger.new(STDOUT))
+  g = Git.open(Rails.root, log: Logger.new(STDOUT))
   g.push(g.remotes.first, g.current_branch)
 end
