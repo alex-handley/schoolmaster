@@ -18,6 +18,11 @@ task :pushme => :environment do
   system("brakeman #{brakeman_opts}")
 
   # Push Branch
-  g = Git.open(Rails.root, log: Logger.new(STDOUT))
+  g = Git.open(Rails.root,
+							 log: SeriousSchoolmaster.configuration.git_logger)
+
   g.push(g.remotes.first, g.current_branch)
+
+	puts
+	puts "PUSHED TO #{g.current_branch}"
 end

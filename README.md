@@ -18,7 +18,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Available configuration options:
+
+| Command Options | Description										| Default       |
+| -------------   | -------------------------			| ------------- |
+| git_logger      | Where to log git messages			| nil           |
 
 ## Contributing
 
