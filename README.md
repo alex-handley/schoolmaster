@@ -23,7 +23,6 @@ Available configuration options:
 | Command Options      | Description										| Default       |
 | -------------        | -------------------------			| ------------- |
 | git_logger           | Where to log git messages			| nil           |
-| -------------        | -------------------------			| ------------- |
 | characters_per_line  | Allowed characters per line    | 100           |
 
 ## Contributing
