@@ -1,7 +1,7 @@
 require "git"
 
 desc "A great audit tool that checks your shit before its pushed"
-task :pushme => :environment do
+task pushme: :environment do
   cane_opts = "--style-measure " \
 							"#{SeriousSchoolmaster.configuration.characters_per_line}"
 
