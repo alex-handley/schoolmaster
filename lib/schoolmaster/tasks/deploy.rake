@@ -3,9 +3,9 @@ require "git"
 desc "A great audit tool that checks your shit before its pushed"
 task pushme: :environment do
   cane_opts = "--style-measure " \
-							"#{SeriousSchoolmaster.configuration.characters_per_line}"
+							"#{Schoolmaster.configuration.characters_per_line}"
 
-	unless SeriousSchoolmaster.configuration.require_file_comments
+	unless Schoolmaster.configuration.require_file_comments
 		cane_opts += " --no-doc"
 	end
 
@@ -14,14 +14,14 @@ task pushme: :environment do
   system("rails_best_practices .")
   system("bundle exec rspec spec")
 
-	unless SeriousSchoolmaster.configuration.debug
+	unless Schoolmaster.configuration.debug
 		brakeman_opts = "-q"
 	end
   system("brakeman #{brakeman_opts}")
 
   # Push Branch
   g = Git.open(Rails.root,
-							 log: SeriousSchoolmaster.configuration.git_logger)
+							 log: Schoolmaster.configuration.git_logger)
 
   g.push(g.remotes.first, g.current_branch)
 

@@ -1,4 +1,4 @@
-module SeriousSchoolmaster
+module Schoolmaster
 	class Configuration
 		attr_accessor :require_file_comments, :debug, :git_logger, :characters_per_line
 

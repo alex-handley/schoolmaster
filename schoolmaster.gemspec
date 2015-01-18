@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'serious_schoolmaster/version'
+require 'schoolmaster/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "serious_schoolmaster"
-  spec.version       = SeriousSchoolmaster::VERSION
+  spec.name          = "schoolmaster"
+  spec.version       = Schoolmaster::VERSION
   spec.authors       = ["Alex Handley"]
   spec.email         = ["alex@seriousfox.co.uk"]
   spec.summary       = "A rake task that runs static code analysis, security " \
