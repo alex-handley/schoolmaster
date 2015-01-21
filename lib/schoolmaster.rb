@@ -1,5 +1,6 @@
 require "schoolmaster/version"
 require "schoolmaster/configuration"
+require "schoolmaster/analysers/base_analyser"
 
 module Schoolmaster
   require 'schoolmaster/railtie' if defined?(Rails)
