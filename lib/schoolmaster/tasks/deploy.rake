@@ -4,13 +4,9 @@ desc "A great audit tool that checks your shit before its pushed"
 task pushme: :environment do
 	CaneAnalyser.new(args:	Schoolmaster.configuration.cane_custom_args).run
 	BestPracticesAnalyser.new.run
+	BrakemanAnalyser.new.run
 
 #  system("bundle exec rspec spec")
-#
-#	unless Schoolmaster.configuration.debug
-#		brakeman_opts = "-q"
-#	end
-#  system("brakeman #{brakeman_opts}")
 #
 #  # Push Branch
 #  g = Git.open(Rails.root,
