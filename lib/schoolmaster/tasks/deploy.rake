@@ -5,9 +5,8 @@ task pushme: :environment do
 	CaneAnalyser.new(args:	Schoolmaster.configuration.cane_custom_args).run
 	BestPracticesAnalyser.new.run
 	BrakemanAnalyser.new.run
+	TestAnalyser.new.run
 
-#  system("bundle exec rspec spec")
-#
 #  # Push Branch
 #  g = Git.open(Rails.root,
 #							 log: Schoolmaster.configuration.git_logger)
