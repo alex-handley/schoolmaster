@@ -1,8 +1,7 @@
 require "schoolmaster/version"
 require "schoolmaster/configuration"
-require "schoolmaster/analysers/base_analyser"
-require "schoolmaster/analysers/cane_analyser"
-require "schoolmaster/analysers/best_practices_analyser"
+
+Dir[File.dirname(__FILE__) + '/schoolmaster/analysers/*.rb'].each { |f| require f }
 
 module Schoolmaster
   require 'schoolmaster/railtie' if defined?(Rails)
