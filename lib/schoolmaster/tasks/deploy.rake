@@ -3,8 +3,8 @@ require "git"
 desc "A great audit tool that checks your shit before its pushed"
 task pushme: :environment do
 	CaneAnalyser.new(args:	Schoolmaster.configuration.cane_custom_args).run
+	BestPracticesAnalyser.new.run
 
-#  system("rails_best_practices .")
 #  system("bundle exec rspec spec")
 #
 #	unless Schoolmaster.configuration.debug
