@@ -1,5 +1,7 @@
 # Schoolmaster
 
+[![Code Climate](https://codeclimate.com/github/alex-handley/schoolmaster/badges/gpa.svg)](https://codeclimate.com/github/alex-handley/schoolmaster)
+
 I built schoolmaster as a rake task originally to run a few of my favourite code metrix gems.
 The rake task helped my apprentices check their work before submitting a pullrequest for QA.
 
