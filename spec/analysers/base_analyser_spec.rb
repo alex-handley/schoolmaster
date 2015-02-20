@@ -1,13 +1,13 @@
 require "spec_helper"
 
-describe BaseAnalyser do
+describe Schoolmaster::BaseAnalyser do
 	context "when inheriting the BaseAnalyser" do
 		it "should execute the configured command" do
 			params = {
 				command: "madeup spec"
 			}
 
-			@klass = Class.new(BaseAnalyser)
+			@klass = Class.new(Schoolmaster::BaseAnalyser)
 
 			analyser = @klass.new(params)
 			expect(analyser).to receive(:system).with("#{params[:command]} ")
@@ -19,7 +19,7 @@ describe BaseAnalyser do
 				command: "madeup spec"
 			}
 
-			@klass = Class.new BaseAnalyser do
+			@klass = Class.new Schoolmaster::BaseAnalyser do
 				def default_args
 					["beam_me_up"]
 				end
