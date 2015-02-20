@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Schoolmaster::VERSION
   spec.authors       = ["Alex Handley"]
   spec.email         = ["alex@seriousfox.co.uk"]
-  spec.summary       = "A rake task that runs static code analysis, security " \
-											 "and best practice checks and then pushes the current branch"
+  spec.summary       = "A gem that runs your tests, static code" \
+											 "analysis, security and best practice checks."
   spec.homepage      = ""
   spec.license       = "MIT"
 
