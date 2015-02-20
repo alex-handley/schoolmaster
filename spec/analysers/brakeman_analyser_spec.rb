@@ -19,7 +19,7 @@ describe Schoolmaster::BrakemanAnalyser do
 
 	context "the debug param" do
 		it "should allow debug to be turned on" do
-			Schoolmaster.configuration.debug = true
+			allow(Schoolmaster.configuration).to receive(:debug).and_return(10)
 			analyser = Schoolmaster::BrakemanAnalyser.new
 			expected_command = "brakeman . "
 			expect(analyser).to receive(:system).with expected_command

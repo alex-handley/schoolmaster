@@ -19,8 +19,10 @@ describe Schoolmaster::CaneAnalyser do
 
 	context "the characters_per_line param" do
 		it "should allow characters_per_line to be changed" do
-			Schoolmaster.configuration.characters_per_line = 10
+			allow(Schoolmaster.configuration).to receive(:characters_per_line)
+																					 .and_return(10)
 			analyser = Schoolmaster::CaneAnalyser.new
+
 			expected_command = "cane . --style-measure 10  --no-doc"
 			expect(analyser).to receive(:system).with expected_command
 			analyser.run
@@ -29,11 +31,11 @@ describe Schoolmaster::CaneAnalyser do
 
 	context "the require_file_comments param" do
 		it "should allow require_file_comments to be changed" do
-			Schoolmaster.configuration.require_file_comments = true
-			Schoolmaster.configuration.characters_per_line = 10
+			allow(Schoolmaster.configuration).to receive(:require_file_comments)
+																					 .and_return(true)
 
 			analyser = Schoolmaster::CaneAnalyser.new
-			expected_command = "cane . --style-measure 10"
+			expected_command = "cane . --style-measure 100"
 			expect(analyser).to receive(:system).with expected_command
 			analyser.run
 		end
