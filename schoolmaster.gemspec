@@ -20,10 +20,10 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
-  spec.add_development_dependency "rspec", "~> 3.1.0"
+  spec.add_development_dependency "rspec", "~> 3.2.0"
 
   spec.add_dependency "git", "~> 1.2.6"
   spec.add_dependency "cane", "~> 2.6.0"
-  spec.add_dependency "brakeman", "~> 2.6.3"
+  spec.add_dependency "brakeman", "~> 3.0.1"
   spec.add_dependency "rails_best_practices", "~> 1.15.0"
 end
