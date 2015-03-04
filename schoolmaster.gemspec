@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "cane", "~> 2.6.0"
   spec.add_dependency "brakeman", "~> 3.0.1"
   spec.add_dependency "rails_best_practices", "~> 1.15.0"
+  spec.add_dependency "bundler-audit", "~> 0.3.1"
 end
