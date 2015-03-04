@@ -10,6 +10,7 @@ The gem currently runs the following checks:
 - https://github.com/presidentbeef/brakeman
 - https://github.com/railsbp/rails_best_practices
 - https://github.com/square/cane
+- https://github.com/rubysec/bundler-audit
 - Schoolmaster currently runs Rspec, this is going to be configurable in the next release.
 
 ## Installation
@@ -44,6 +45,7 @@ Available configuration options:
 | test_custom_args                | Add additional params for rspec               | []            |
 | best_practices_custom_args      | Add additional params to Rails Best Practice  | []            |
 | brakeman_custom_args            | Add additional params to Brakeman             | []            |
+| bundler_audit_custom_args       | Add additional params to Bundler Audit        | []            |
 
 ### Example configuration block
 
@@ -57,6 +59,7 @@ To customize schoolmaster add an initializer:
       c.test_custom_args = ["-f doc"]
       c.best_practices_custom_args = ["--with-git"]
       c.brakeman_custom_args = ["--skip-files app/controllers/application_controller.rb"]
+      c.bundler_audit_custom_args = ["--ignore OSVDB-108664"]
      end
     end
 
@@ -68,3 +71,4 @@ To customize schoolmaster add an initializer:
 4. Ensure the tests pass
 5. Push to the branch (`git push origin my-new-feature`)
 6. Create new Pull Request
+
