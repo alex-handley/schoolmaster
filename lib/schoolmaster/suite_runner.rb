@@ -14,6 +14,9 @@ module Schoolmaster
 
 			Schoolmaster::TestAnalyser.new(
 																	args: Schoolmaster.configuration.test_custom_args).run
+
+			Schoolmaster::BundlerAuditAnalyser.new(
+																	args: Schoolmaster.configuration.bundler_audit_custom_args).run
 		end
 	end
 end
